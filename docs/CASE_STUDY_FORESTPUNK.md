@@ -9,7 +9,7 @@ In room `!4zKUu8M4fstFjTFZ9E:nutra.tk`, a "Ghost User" situation occurred.
 
 ## The Technical Failure
 
-A 3-way analysis using `ruma-lean` revealed a profound split between **Human Consensus** and **Partial-DAG Math**:
+A 3-way analysis using `rezzy` revealed a profound split between **Human Consensus** and **Partial-DAG Math**:
 
 | Server                            | View           | Status                  |
 | :-------------------------------- | :------------- | :---------------------- |

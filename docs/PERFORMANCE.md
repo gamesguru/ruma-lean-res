@@ -49,7 +49,7 @@ Matrix State Resolution fundamentally prohibits pure "streaming" because it requ
 1. To sort two events, you have to know if one is an ancestor of the other. That requires walking the graph backward.
 2. To sort non-power events, you have to calculate their shortest path to the "mainline". You cannot know the shortest path without the full sub-graph loaded.
 
-However, we don't load the whole DAG. We load a strictly bounded "Working Set". This is where the **Roaring Bitmaps** optimization bridges the gap between memory limits and I/O limits. The optimal architecture for a homeserver using `ruma-lean` is exactly a phased pipeline:
+However, we don't load the whole DAG. We load a strictly bounded "Working Set". This is where the **Roaring Bitmaps** optimization bridges the gap between memory limits and I/O limits. The optimal architecture for a homeserver using `rezzy` is exactly a phased pipeline:
 
 ### Phase 1: The Index Pass (Zero Event Data)
 
@@ -72,4 +72,4 @@ You hand that `HashMap` to `resolve_lean`. Because all required data is perfectl
 
 Traditional engines like `ruma-state-res` use a `fetch_event` closure to try and "stream" or "lazy-load" the DAG on the fly. But because Kahn sorting and Mainline distances require traversing the same nodes repeatedly, lazy-loading inevitably degrades into the $O(N)$ double-fetch "I/O Wall"—hammering the database with thousands of sequential point-queries.
 
-By forcing the caller to provide a `HashMap` upfront, `ruma-lean` intentionally makes lazy-loading impossible. It _forces_ the homeserver developer to use the optimal Batch-Fetch architecture, ensuring the resolution loop runs at pure RAM/CPU speed!
+By forcing the caller to provide a `HashMap` upfront, `rezzy` intentionally makes lazy-loading impossible. It _forces_ the homeserver developer to use the optimal Batch-Fetch architecture, ensuring the resolution loop runs at pure RAM/CPU speed!
