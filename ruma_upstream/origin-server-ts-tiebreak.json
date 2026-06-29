@@ -21,14 +21,8 @@
     },
     "state_key": "",
     "origin_server_ts": 6,
-    "prev_events": [
-      "$00-m-room-guest_access"
-    ],
-    "auth_events": [
-      "$00-m-room-create",
-      "$00-m-room-member-join-alice",
-      "$00-m-room-power_levels"
-    ]
+    "prev_events": ["$00-m-room-guest_access"],
+    "auth_events": ["$00-m-room-create", "$00-m-room-member-join-alice", "$00-m-room-power_levels"]
   },
   {
     "test-comments": [
@@ -46,13 +40,7 @@
     },
     "state_key": "",
     "origin_server_ts": 7,
-    "prev_events": [
-      "$00-m-room-guest_access"
-    ],
-    "auth_events": [
-      "$00-m-room-create",
-      "$00-m-room-member-join-alice",
-      "$00-m-room-power_levels"
-    ]
+    "prev_events": ["$00-m-room-guest_access"],
+    "auth_events": ["$00-m-room-create", "$00-m-room-member-join-alice", "$00-m-room-power_levels"]
   }
 ]

@@ -9,9 +9,7 @@
     },
     "state_key": "@bob:example.com",
     "origin_server_ts": 8,
-    "prev_events": [
-      "$00-m-room-topic"
-    ],
+    "prev_events": ["$00-m-room-topic"],
     "auth_events": [
       "$00-m-room-create",
       "$01-m-room-power_levels",

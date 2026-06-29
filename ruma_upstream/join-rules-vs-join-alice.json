@@ -9,13 +9,7 @@
     },
     "state_key": "",
     "origin_server_ts": 9,
-    "prev_events": [
-      "$02-m-room-power_levels"
-    ],
-    "auth_events": [
-      "$00-m-room-create",
-      "$02-m-room-power_levels",
-      "$00-m-room-member-join-alice"
-    ]
+    "prev_events": ["$02-m-room-power_levels"],
+    "auth_events": ["$00-m-room-create", "$02-m-room-power_levels", "$00-m-room-member-join-alice"]
   }
 ]

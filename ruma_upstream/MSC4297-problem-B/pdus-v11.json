@@ -23,12 +23,8 @@
     },
     "state_key": "@alice:example.com",
     "origin_server_ts": 1,
-    "prev_events": [
-      "$00-m-room-create"
-    ],
-    "auth_events": [
-      "$00-m-room-create"
-    ]
+    "prev_events": ["$00-m-room-create"],
+    "auth_events": ["$00-m-room-create"]
   },
   {
     "event_id": "$00-m-room-power_levels",
@@ -42,13 +38,8 @@
     },
     "state_key": "",
     "origin_server_ts": 2,
-    "prev_events": [
-      "$00-m-room-member-join-alice"
-    ],
-    "auth_events": [
-      "$00-m-room-create",
-      "$00-m-room-member-join-alice"
-    ]
+    "prev_events": ["$00-m-room-member-join-alice"],
+    "auth_events": ["$00-m-room-create", "$00-m-room-member-join-alice"]
   },
   {
     "event_id": "$00-m-room-join_rules",
@@ -60,14 +51,8 @@
     },
     "state_key": "",
     "origin_server_ts": 3,
-    "prev_events": [
-      "$00-m-room-power_levels"
-    ],
-    "auth_events": [
-      "$00-m-room-create",
-      "$00-m-room-member-join-alice",
-      "$00-m-room-power_levels"
-    ]
+    "prev_events": ["$00-m-room-power_levels"],
+    "auth_events": ["$00-m-room-create", "$00-m-room-member-join-alice", "$00-m-room-power_levels"]
   },
   {
     "event_id": "$00-m-room-member-join-bob",
@@ -80,14 +65,8 @@
     },
     "state_key": "@bob:example.com",
     "origin_server_ts": 4,
-    "prev_events": [
-      "$00-m-room-join_rules"
-    ],
-    "auth_events": [
-      "$00-m-room-create",
-      "$00-m-room-power_levels",
-      "$00-m-room-join_rules"
-    ]
+    "prev_events": ["$00-m-room-join_rules"],
+    "auth_events": ["$00-m-room-create", "$00-m-room-power_levels", "$00-m-room-join_rules"]
   },
   {
     "event_id": "$00-m-room-member-join-charlie",
@@ -100,14 +79,8 @@
     },
     "state_key": "@charlie:example.com",
     "origin_server_ts": 5,
-    "prev_events": [
-      "$00-m-room-member-join-bob"
-    ],
-    "auth_events": [
-      "$00-m-room-create",
-      "$00-m-room-power_levels",
-      "$00-m-room-join_rules"
-    ]
+    "prev_events": ["$00-m-room-member-join-bob"],
+    "auth_events": ["$00-m-room-create", "$00-m-room-power_levels", "$00-m-room-join_rules"]
   },
   {
     "event_id": "$01-m-room-power_levels",
@@ -122,14 +95,8 @@
     },
     "state_key": "",
     "origin_server_ts": 6,
-    "prev_events": [
-      "$00-m-room-member-join-charlie"
-    ],
-    "auth_events": [
-      "$00-m-room-create",
-      "$00-m-room-power_levels",
-      "$00-m-room-member-join-alice"
-    ]
+    "prev_events": ["$00-m-room-member-join-charlie"],
+    "auth_events": ["$00-m-room-create", "$00-m-room-power_levels", "$00-m-room-member-join-alice"]
   },
   {
     "event_id": "$02-m-room-power_levels",
@@ -145,14 +112,8 @@
     },
     "state_key": "",
     "origin_server_ts": 7,
-    "prev_events": [
-      "$01-m-room-power_levels"
-    ],
-    "auth_events": [
-      "$00-m-room-create",
-      "$01-m-room-power_levels",
-      "$00-m-room-member-join-bob"
-    ]
+    "prev_events": ["$01-m-room-power_levels"],
+    "auth_events": ["$00-m-room-create", "$01-m-room-power_levels", "$00-m-room-member-join-bob"]
   },
   {
     "event_id": "$00-m-room-member-join-zara",
@@ -165,14 +126,8 @@
     },
     "state_key": "@zara:example.com",
     "origin_server_ts": 8,
-    "prev_events": [
-      "$02-m-room-power_levels"
-    ],
-    "auth_events": [
-      "$00-m-room-create",
-      "$02-m-room-power_levels",
-      "$00-m-room-join_rules"
-    ]
+    "prev_events": ["$02-m-room-power_levels"],
+    "auth_events": ["$00-m-room-create", "$02-m-room-power_levels", "$00-m-room-join_rules"]
   },
   {
     "event_id": "$00-m-room-member-join-eve",
@@ -185,14 +140,8 @@
     },
     "state_key": "@eve:example.com",
     "origin_server_ts": 9,
-    "prev_events": [
-      "$02-m-room-power_levels"
-    ],
-    "auth_events": [
-      "$00-m-room-create",
-      "$02-m-room-power_levels",
-      "$00-m-room-join_rules"
-    ]
+    "prev_events": ["$02-m-room-power_levels"],
+    "auth_events": ["$00-m-room-create", "$02-m-room-power_levels", "$00-m-room-join_rules"]
   },
   {
     "event_id": "$01-m-room-member-change-display-name-eve",
@@ -205,9 +154,7 @@
     },
     "state_key": "@eve:example.com",
     "origin_server_ts": 9,
-    "prev_events": [
-      "$00-m-room-member-join-eve"
-    ],
+    "prev_events": ["$00-m-room-member-join-eve"],
     "auth_events": [
       "$00-m-room-create",
       "$02-m-room-power_levels",

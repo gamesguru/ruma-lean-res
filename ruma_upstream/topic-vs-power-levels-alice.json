@@ -9,14 +9,8 @@
     },
     "state_key": "",
     "origin_server_ts": 8,
-    "prev_events": [
-      "$01-m-room-power_levels"
-    ],
-    "auth_events": [
-      "$00-m-room-create",
-      "$01-m-room-power_levels",
-      "$00-m-room-member-join-alice"
-    ]
+    "prev_events": ["$01-m-room-power_levels"],
+    "auth_events": ["$00-m-room-create", "$01-m-room-power_levels", "$00-m-room-member-join-alice"]
   },
   {
     "event_id": "$02-m-room-power_levels-alice",
@@ -31,13 +25,7 @@
     },
     "state_key": "",
     "origin_server_ts": 9,
-    "prev_events": [
-      "$00-m-room-topic-alice"
-    ],
-    "auth_events": [
-      "$00-m-room-create",
-      "$01-m-room-power_levels",
-      "$00-m-room-member-join-alice"
-    ]
+    "prev_events": ["$00-m-room-topic-alice"],
+    "auth_events": ["$00-m-room-create", "$01-m-room-power_levels", "$00-m-room-member-join-alice"]
   }
 ]
