@@ -151,3 +151,35 @@ Exhaustive list of `ev.content.get(...)` calls across the codebase:
   flexibility of `Value`.
 - **Deserialization**: The custom `LeanEvent` deserializer must be updated to
   populate `TypedContent` from raw JSON. This is non-trivial but bounded.
+
+### Derived Fields: `is_power_event`
+
+Once `TypedContent` exists, power event classification becomes a trivial derived
+method instead of requiring JSON introspection:
+
+```rust
+impl<Id> LeanEvent<Id> {
+    /// Whether this event is a power event for the given resolution version.
+    ///
+    /// Power events affect the room's administrative state and are resolved
+    /// first during state resolution. The definition varies by version:
+    /// - V1/V2: all `m.room.member` events are power events
+    /// - V2.1+: only ban/kick `m.room.member` events are power events
+    pub fn is_power_event(&self, version: StateResVersion) -> bool {
+        matches!(self.event_type.as_str(),
+            "m.room.create" | "m.room.power_levels" | "m.room.join_rules"
+        ) || match version {
+            StateResVersion::V2_1 | StateResVersion::V2_1_1 | StateResVersion::V2_2 => {
+                self.content.membership.as_deref() == Some("ban")
+                    || self.content.membership.as_deref() == Some("leave")
+                        && self.state_key.as_deref() != Some(&self.sender)
+            }
+            _ => self.event_type == "m.room.member",
+        }
+    }
+}
+```
+
+This eliminates the need for DB-level `is_power_event` boolean columns, which
+would be fragile because the definition is room-version-dependent. Computing it
+from `TypedContent` at runtime is nanoseconds and always correct.
