@@ -116,7 +116,7 @@ pub fn auth_types_for_event<C: EventContent>(
 }
 
 // In src/resolve.rs
-pub fn resolve_lean<Id, C, S1, S2>(
+pub fn resolve_iterative_sort<Id, C, S1, S2>(
     unconflicted_state: BTreeMap<(String, Option<String>), Id>,
     conflicted_events: HashMap<Id, LeanEvent<Id, C>, S1>,
     auth_context: &HashMap<Id, LeanEvent<Id, C>, S2>,

@@ -63,7 +63,7 @@ You deserialize these rows directly into the `HashMap<String, LeanEvent>`.
 
 ### Phase 3: The CPU Pass (Zero I/O)
 
-You hand that `HashMap` to `resolve_lean`. Because all required data is perfectly isolated in the CPU cache, `resolve_lean` can do exactly what you suggested:
+You hand that `HashMap` to `resolve_iterative_sort`. Because all required data is perfectly isolated in the CPU cache, `resolve_iterative_sort` can do exactly what you suggested:
 
 1. One pass to sort (Kahn sort & Mainline sort).
 2. One pass to process state (Iterative auth checks).
