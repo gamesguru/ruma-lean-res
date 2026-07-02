@@ -1590,6 +1590,16 @@
       "event_id": "$2wXROzNsxfWZ7f_yyKheOjbbcXJcKzCz3Px2vHSeA0c",
       "state_key": "@zymooo:matrix.org",
       "type": "m.room.member"
+    },
+    {
+      "event_id": "$Q-vBdcxb-8Jx-S00NUNM5hlV1zChME_cWWhsPH_5jnM",
+      "state_key": "",
+      "type": "m.room.message"
+    },
+    {
+      "event_id": "$vJ5jgxiuY7kV8EGl74dsIgyvlnV0HcW4CuevPjG1aTM",
+      "state_key": "",
+      "type": "m.room.redaction"
     }
   ],
   "room_id": "!UbCmIlGTHNIgIRZcpt:nheko.im",
